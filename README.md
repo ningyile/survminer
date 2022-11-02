@@ -26,6 +26,18 @@ Downloads](https://cranlogs.r-pkg.org/badges/grand-total/survminer?color=orange)
         -   [Uber platinum premium customized survival
             curves](#uber-platinum-premium-customized-survival-curves)
     -   [Blog posts](#blog-posts)
+# How to linstall
+
+```R
+install.packages("devtools")
+devtools::install_github('ningyile/survminer')
+```
+
+# Features
+
+使用IPW调整的生存分析绘图时出现[累计事件和censoring出现小数的情况](https://github.com/kassambara/survminer/issues/554)，原因是`utilities.R`中`cum.n.event`和`cum.n.censor`未像其他参数一样进行`round`。
+
+Round the cumulative number of event and censoring in weighted survival estimates(such as inverse-probability weight, IPW). Fix the issue of [ggsurvplot cumevents decimal places / digits when using weights](https://github.com/kassambara/survminer/issues/554).
 
 survminer: Survival Analysis and Visualization
 ==============================================
